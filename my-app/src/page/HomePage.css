@@ -1,0 +1,58 @@
+.homepage {
+  background: url("../../public/asset/background.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 85%;
+  height: 67.69px;
+  padding: 0rem 2rem;
+  margin-top: 39.19px;
+  border-radius: 8.91px;
+  color: white;
+  box-shadow: -3.942500114440918px 3.942500114440918px 3.942500114440918px 0px
+      rgba(255, 255, 255, 0.43) inset,
+    3.942500114440918px -3.942500114440918px 3.942500114440918px 0px rgba(
+        182,
+        182,
+        182,
+        0.43
+      ) inset;
+
+  background-color: rgba(217, 217, 217, 0.12);
+  backdrop-filter: blur(5px);
+  /* font-weight: 500; */
+  font-size: 17.81px;
+}
+
+.link {
+  text-decoration: none;
+  color: rgba(255, 255, 255, 1);
+}
+
+.create-btn {
+  border: 2.67px solid rgba(255, 255, 255, 1);
+
+  border-radius: 8.91px;
+  padding: 0px 12px 5px 12px;
+  margin-left: 15px;
+}
+
+.text {
+  font-family: Euclid Circular B;
+  font-size: 71px;
+  font-weight: 700;
+  line-height: 88px;
+  letter-spacing: 0em;
+  max-width: 60%;
+  color: rgba(255, 255, 255, 1);
+}
