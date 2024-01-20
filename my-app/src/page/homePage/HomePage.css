@@ -1,5 +1,5 @@
 .homepage {
-  background: url("../../public/asset/background.png");
+  background: url("../../../public/asset/background.png");
   background-repeat: no-repeat;
   background-size: cover;
   height: 100vh;
@@ -62,7 +62,7 @@ nav {
   position: relative;
   width: 100%;
   max-width: 757.03px;
-  height: 67.69px;
+  padding: 15px 0px;
   border-radius: 8.91px;
   color: rgba(217, 217, 217);
   box-shadow: -3.942500114440918px 3.942500114440918px 3.942500114440918px 0px
@@ -129,6 +129,11 @@ input::placeholder {
   box-shadow: 0px 0px 5px 0px;
 }
 
+.searched-text {
+  color: white;
+  font-size: 3rem;
+}
+
 .trending-tags {
   color: rgba(217, 217, 217);
   box-shadow: -3.942500114440918px 3.942500114440918px 3.942500114440918px 0px
@@ -147,8 +152,8 @@ input::placeholder {
   font-size: 13px;
   font-weight: 400;
   line-height: 21px;
-  letter-spacing: 0em;
   text-align: left;
   border-radius: 8.91px;
   padding: 5px 25px;
+  height: 22px;
 }

@@ -1,0 +1,49 @@
+.image-list-page {
+  background-color: white;
+}
+
+.image-list {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+.tag-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  color: white;
+}
+
+.tag {
+  padding: 0.2rem 3rem;
+  margin: 1rem;
+  border: 1px solid gray;
+  color: grey;
+  height: fit-content;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.image {
+  width: 364.59px;
+  height: 242.71px;
+  border-radius: 5px;
+}
+
+.image-tag-list {
+  display: flex;
+}
+
+.image-tag {
+  color: rgb(161, 161, 161);
+  background-color: rgb(235, 235, 235);
+  border-radius: 5px;
+  padding: 1px 10px;
+  margin-right: 1rem;
+  margin-top: 0.5rem;
+}
+
+.image-section {
+  text-align: left;
+  margin: 1rem;
+}

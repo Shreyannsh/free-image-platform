@@ -1,0 +1,14 @@
+.parent {
+  width: 832.11px;
+  height: 555.34px;
+  top: 310.99px;
+  left: 63.09px;
+  border-radius: 7.11px;
+}
+
+nav {
+  background: rgba(245, 245, 245, 1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
