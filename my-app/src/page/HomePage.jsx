@@ -15,16 +15,21 @@ function HomePage() {
         </div>
       </nav>
       <p className="text">Discover over 2,000,000 free Stock Images</p>
-      <div>
-        <span>
-          <CiSearch /> |
+      <div className="search-area">
+        <span className="search-icon">
+          <span className="icon">
+            <CiSearch />
+          </span>
+          <span className="pipe">|</span>
         </span>
-        <input type="text" />
-        <span>Go!</span>
+
+        <input className="searchBar" placeholder="Search" type="text" />
+
+        <span className="go">Go!</span>
       </div>
       <div>
-        <p>
-          <b>Trending: </b>flowers,love,forest,river
+        <p className="trending-tags">
+          <b>Trending: </b> flowers, love, forest, river
         </p>
       </div>
     </div>
