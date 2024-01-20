@@ -1,14 +1,146 @@
 .parent {
-  width: 832.11px;
-  height: 555.34px;
-  top: 310.99px;
-  left: 63.09px;
-  border-radius: 7.11px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 99;
+  /* width: 1217.32px;
+  height: 779.26px; */
+  border-radius: 8.89px;
 }
 
-nav {
+.child {
+  background: rgba(255, 255, 255, 1);
+  width: 80%;
+  height: 90%;
+  border-radius: 10px;
+
+  overflow-y: scroll;
+}
+
+.header {
   background: rgba(245, 245, 245, 1);
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-bottom: 2rem;
+  padding: 0px 1rem;
+}
+
+.header p {
+  font-family: Euclid Circular B;
+  font-size: 21px;
+  font-weight: 500;
+  text-align: left;
+  color: rgba(59, 64, 67, 1);
+}
+.close-btn {
+  font-size: 2rem;
+  border-radius: 5px;
+  color: rgba(59, 64, 67, 1);
+}
+.main-content {
+  display: flex;
+}
+
+/* .left-section {
+  width: 85%;
+  height: 70%;
+} */
+
+.large-image {
+  width: 90%;
+  height: 80%;
+  border-radius: 7.11px;
+}
+
+.image-tag-list {
+  margin-left: 2.5rem;
+  display: flex;
+  align-items: center;
+}
+
+.image-tagg {
+  color: rgb(161, 161, 161);
+  background-color: rgb(235, 235, 235);
+  border-radius: 5px;
+  padding: 1px 10px;
+  margin: 1rem 1rem;
+}
+
+.right-section {
+  text-align: left;
+  margin-right: 1rem;
+  width: 40%;
+}
+
+.info {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 2rem;
+}
+.title {
+  font-family: Euclid Circular B;
+  font-size: 21px;
+  font-weight: 500;
+  margin-bottom: 1rem;
+  margin-top: 1px;
+}
+
+.table-container {
+  overflow: hidden;
+}
+
+table {
+  text-align: left;
+  border: 1px solid black;
+  border-radius: 10px;
+  border-collapse: collapse;
+  width: 90%;
+}
+
+tr {
+  border: 1px solid #ddd;
+  width: 100%;
+  padding: 18px;
+  text-align: left;
+  border-radius: 10px;
+}
+
+td {
+  padding: 10px;
+}
+
+.second-parameter {
+  text-align: right;
+}
+.second-parameter input {
+  margin-left: 1rem;
+}
+
+.heading {
+  font-size: small;
+}
+
+.value {
+  font-size: larger;
+  font-weight: 600;
+  margin-top: -0.8rem;
+}
+
+button {
+  width: 90%;
+  height: 37.33px;
+  border-radius: 4.44px;
+  background: rgba(75, 195, 75, 1);
+  color: rgba(255, 255, 255, 1);
+  border: transparent;
+  margin: 1rem 0rem;
+  cursor: pointer;
+}
+
+button:hover {
+  background: rgb(53, 165, 53);
 }
