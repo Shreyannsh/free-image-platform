@@ -46,7 +46,7 @@ function IndividualPage({ id, show, onClose }) {
               src={selectedImage.largeImageURL}
               alt=""
             />
-            <div className="image-tag-list">
+            <div className="image-tag-listt">
               <b> Tags:</b>
               {selectedImage.tags.split(",").map((tag) => (
                 <p className="image-tagg">{tag}</p>

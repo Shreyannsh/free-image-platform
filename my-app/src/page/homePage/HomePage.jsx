@@ -2,10 +2,11 @@ import "./HomePage.css";
 
 import { Link } from "react-router-dom";
 import { CiSearch } from "react-icons/ci";
-import { useContext } from "react";
+import { useContext, useEffect, useState } from "react";
 import ProductListPage from "../productListPage/productListPage";
 import { imageContext } from "../../context/context";
 import Loader from "../../components/loader/loader";
+import axios from "axios";
 
 function HomePage() {
   const {
@@ -17,8 +18,54 @@ function HomePage() {
     isLoading,
   } = useContext(imageContext);
 
+  const [coverImage, setCoverImage] = useState("");
+
+  const realWords = [
+    "apple",
+    "banana",
+    "orange",
+    "elephant",
+    "guitar",
+    "computer",
+    "sunshine",
+    "mountain",
+    "ocean",
+    "butterfly",
+    // Add more words as needed
+  ];
+
+  function generateRandomWord() {
+    const randomIndex = Math.floor(Math.random() * realWords.length);
+    return realWords[randomIndex];
+  }
+
+  // Example: Generate a random word
+  const randomWord = generateRandomWord();
+  console.log(randomWord);
+
+  const coverImageFunc = async () => {
+    try {
+      const response = await axios.get(
+        `https://pixabay.com/api/?key=41907647-3c21440eb2cf558ad433d1b30&q=${randomWord}&image_type=photo`
+      );
+      const data = response.data.hits[0];
+      setCoverImage(data.webformatURL);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  useEffect(() => {
+    coverImageFunc();
+  }, []);
+  console.log(coverImage);
   return (
-    <div className="homepage">
+    <div
+      className="homepage"
+      style={{
+        backgroundImage: `url(${coverImage})`,
+      }}
+    >
       {isLoading && <Loader />}
       <nav>
         <p>Homepage</p>
