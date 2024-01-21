@@ -31,7 +31,6 @@ function HomePage() {
     "mountain",
     "ocean",
     "butterfly",
-    // Add more words as needed
   ];
 
   function generateRandomWord() {
@@ -39,9 +38,7 @@ function HomePage() {
     return realWords[randomIndex];
   }
 
-  // Example: Generate a random word
   const randomWord = generateRandomWord();
-  console.log(randomWord);
 
   const coverImageFunc = async () => {
     try {

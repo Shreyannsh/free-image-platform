@@ -18,13 +18,11 @@ function IndividualPage({ id, show, onClose }) {
     } else if (size === "large") {
       saveAs(selectedImage.webformatURL, "large-image");
     }
-    downloadLink.download = { size }; // Set a default name if imageName is not provided
+    downloadLink.download = { size };
 
-    // Append the link to the body and simulate a click
     document.body.appendChild(downloadLink);
     downloadLink.click();
 
-    // Clean up
     document.body.removeChild(downloadLink);
   };
   if (!show) {

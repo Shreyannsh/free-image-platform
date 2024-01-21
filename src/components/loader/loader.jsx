@@ -1,9 +1,6 @@
 import "./loader.css";
 
-export default function Loader(props) {
-  //   if (!props.loading) {
-  //     return null;
-  //   }
+export default function Loader() {
   return (
     <div className="parent">
       <img

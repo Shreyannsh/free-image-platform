@@ -12,14 +12,11 @@ function ProductListPage(props) {
   const requiredTags = tags.splice(0, 7);
   console.log(requiredTags);
   useEffect(() => {
-    // Ensure that props.data is defined before mapping
     if (props.data) {
       props.data.forEach((obj) => {
         let arr = obj.tags.split(",");
         arr.forEach((tag) => {
-          // Use the functional form of setTags to ensure correct state
           setTags((prevTags) => {
-            // Check if tag is not already in tags array
             if (!prevTags.includes(tag.trim())) {
               return [...prevTags, tag.trim()];
             }
