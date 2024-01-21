@@ -2,53 +2,24 @@ import "./HomePage.css";
 
 import { Link } from "react-router-dom";
 import { CiSearch } from "react-icons/ci";
-import { useContext, useEffect, useState } from "react";
-import axios from "axios";
+import { useContext } from "react";
 import ProductListPage from "../productListPage/productListPage";
 import { imageContext } from "../../context/context";
+import Loader from "../../components/loader/loader";
 
 function HomePage() {
   const {
     searchedText,
     convertedText,
     imageCollection,
-    search,
     handleSearch,
     setSearchedText,
-    setConvertedText,
+    isLoading,
   } = useContext(imageContext);
 
-  // const [searchedText, setSearchedText] = useState("");
-  // const [convertedText, setConvertedText] = useState("");
-  // const [imageCollection, setImageCollection] = useState(null);
-  // const search = () => {
-  //   if (searchedText) {
-  //     setConvertedText(searchedText.replace(/\s+/g, "+"));
-  //   }
-  // };
-
-  // const handleSearch = async () => {
-  //   try {
-  //     if (convertedText) {
-  //       const response = await axios.get(
-  //         `https://pixabay.com/api/?key=41907647-3c21440eb2cf558ad433d1b30&q=${convertedText}&image_type=photo`
-  //       );
-  //       const data = response.data;
-  //       setImageCollection(() => data.hits);
-  //       setSearchedText("");
-  //     }
-  //   } catch (error) {
-  //     console.log(error);
-  //   }
-  // };
-
-  // useEffect(() => {
-  //   search();
-  // }, [searchedText]);
-
-  console.log(imageCollection);
   return (
     <div className="homepage">
+      {isLoading && <Loader />}
       <nav>
         <p>Homepage</p>
         <div>
