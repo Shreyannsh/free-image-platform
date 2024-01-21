@@ -1,5 +1,8 @@
 .image-list-page {
   background-color: white;
+  /* display: flex;
+  flex-direction: column;
+  align-items: center; */
 }
 
 .image-list {
@@ -25,7 +28,8 @@
 }
 
 .image {
-  width: 364.59px;
+  width: 100%;
+  max-width: 364.59px;
   height: 242.71px;
   border-radius: 5px;
 }

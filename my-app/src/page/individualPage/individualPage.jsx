@@ -54,80 +54,85 @@ function IndividualPage({ id, show, onClose }) {
             </div>
           </div>
           <div className="right-section">
-            <p className="title">Download</p>
-            <div className="table-container">
-              <table>
-                <tbody>
-                  <tr>
-                    <td>Small</td>
-                    <td className="second-parameter">
-                      640x960
-                      <input
-                        name="size"
-                        type="radio"
-                        value="small"
-                        onChange={(e) => setSize(e.target.value)}
-                      />
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>Medium</td>
-                    <td className="second-parameter">
-                      1920x2660
-                      <input
-                        name="size"
-                        type="radio"
-                        value="medium"
-                        onChange={(e) => setSize(e.target.value)}
-                      />
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>Big</td>
-                    <td className="second-parameter">
-                      2400x3600
-                      <input
-                        name="size"
-                        type="radio"
-                        value="large"
-                        checked
-                        onChange={(e) => setSize(e.target.value)}
-                      />
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
+            <div>
+              <p className="title">Download</p>
+              <div className="table-container">
+                <table>
+                  <tbody>
+                    <tr>
+                      <td>Small</td>
+                      <td className="second-parameter">
+                        640x960
+                        <input
+                          name="size"
+                          type="radio"
+                          value="small"
+                          onChange={(e) => setSize(e.target.value)}
+                        />
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Medium</td>
+                      <td className="second-parameter">
+                        1920x2660
+                        <input
+                          name="size"
+                          type="radio"
+                          value="medium"
+                          onChange={(e) => setSize(e.target.value)}
+                        />
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Big</td>
+                      <td className="second-parameter">
+                        2400x3600
+                        <input
+                          name="size"
+                          type="radio"
+                          value="large"
+                          checked
+                          onChange={(e) => setSize(e.target.value)}
+                        />
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div className="btn-section">
+                {" "}
+                <button onClick={() => downloadFunc()}>
+                  Download for free!
+                </button>
+              </div>
             </div>
-            <div className="btn-section">
-              {" "}
-              <button onClick={() => downloadFunc()}>Download for free!</button>
-            </div>
-
-            <p className="title">Information</p>
-            <div className="info">
-              <div className="info-section">
-                <p className="heading">User</p>
-                <p className="value">{selectedImage.user}</p>
-              </div>
-              <div>
-                <p className="heading">User ID</p>
-                <p className="value">{selectedImage.user_id}</p>
-              </div>
-              <div>
-                <p className="heading">Type</p>
-                <p className="value">{selectedImage.type}</p>
-              </div>
-              <div>
-                <p className="heading">Views</p>
-                <p className="value">{selectedImage.views}</p>
-              </div>
-              <div>
-                <p className="heading">Downloads</p>
-                <p className="value">{selectedImage.downloads}</p>
-              </div>
-              <div>
-                <p className="heading">Likes</p>
-                <p className="value">{selectedImage.likes}</p>
+            <div>
+              <p className="title">Information</p>
+              <div className="info">
+                <div className="info-section">
+                  <p className="heading">User</p>
+                  <p className="value">{selectedImage.user}</p>
+                </div>
+                <div className="info-section">
+                  <p className="heading">User ID</p>
+                  <p className="value">{selectedImage.user_id}</p>
+                </div>
+                <div className="info-section">
+                  <p className="heading">Type</p>
+                  <p className="value">{selectedImage.type}</p>
+                </div>
+                <div className="info-section">
+                  <p className="heading">Views</p>
+                  <p className="value">{selectedImage.views}</p>
+                </div>
+                <div className="info-section">
+                  <p className="heading">Downloads</p>
+                  <p className="value">{selectedImage.downloads}</p>
+                </div>
+                <div className="info-section">
+                  <p className="heading">Likes</p>
+                  <p className="value">{selectedImage.likes}</p>
+                </div>
               </div>
             </div>
           </div>

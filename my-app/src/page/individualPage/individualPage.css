@@ -57,7 +57,6 @@
 }
 
 .image-tag-list {
-  margin-left: 2.5rem;
   display: flex;
   align-items: center;
 }
@@ -76,10 +75,16 @@
   width: 40%;
 }
 
+.info-section {
+  margin: 0.5rem;
+}
+
 .info {
   display: grid;
+  /* flex-direction: row;
+  flex-wrap: wrap; */
   grid-template-columns: 1fr 1fr 1fr;
-  column-gap: 2rem;
+  gap: 2%;
 }
 .title {
   font-family: Euclid Circular B;
@@ -91,6 +96,8 @@
 
 .table-container {
   overflow: hidden;
+  display: flex;
+  justify-content: center;
 }
 
 table {
@@ -143,4 +150,71 @@ button {
 
 button:hover {
   background: rgb(53, 165, 53);
+}
+
+@media (max-width: 850px) {
+  .main-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .title {
+    font-weight: 800;
+  }
+
+  .right-section {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    width: 100%;
+    margin-top: 1rem;
+    margin-right: 0%;
+  }
+
+  .info {
+    display: grid;
+    /* flex-direction: row;
+    flex-wrap: wrap; */
+    grid-template-columns: 1fr 1fr;
+    gap: 0%;
+  }
+  .info-section {
+    margin-top: 0rem;
+  }
+  .value {
+    font-size: large;
+    font-weight: 600;
+    margin-top: -0.8rem;
+  }
+}
+
+@media (max-width: 470px) {
+  .right-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    text-align: center;
+    width: 100%;
+    margin-top: 1rem;
+    margin-right: 0%;
+  }
+
+  .left-section {
+    width: 100%;
+  }
+
+  .image-tag-list {
+    width: 90%;
+    margin-left: 1rem;
+    flex-wrap: wrap;
+  }
+
+  .image-tagg {
+    color: rgb(161, 161, 161);
+    background-color: rgb(235, 235, 235);
+    border-radius: 5px;
+    padding: 1px 10px;
+    margin: 0.2rem 0.2rem;
+  }
 }
